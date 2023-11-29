@@ -1,0 +1,20 @@
+{
+  "name": "poc__elasticsearch-document-indexing",
+  "private": true,
+  "description": "Proof of concept for handling document indexing in Elasticsearch",
+  "scripts": {
+    "poc": "node --env-file=.env dist/poc.js",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.10.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

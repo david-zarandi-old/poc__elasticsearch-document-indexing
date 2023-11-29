@@ -1,0 +1,17 @@
+version: "2.17.2"
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.1
+    container_name: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    restart: always
+    environment:
+      ELASTIC_PASSWORD: elastic
+      KIBANA_PASSWORD: kibana
+      discovery.type: single-node
+      xpack.security.http.ssl.enabled: false
+      xpack.security.authc.anonymous.username: elastic
+      xpack.security.authc.anonymous.roles: superuser
+      xpack.security.authc.anonymous.authz_exception: true
